@@ -495,7 +495,7 @@ html {
   height: auto;
   border-radius: 14px;
   display: block;
-
+  transform: scale(0.9);
   transition: all 0.4s ease;
 
   box-shadow: 
