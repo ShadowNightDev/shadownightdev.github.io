@@ -482,12 +482,12 @@ html {
 .preview-wrapper {
   display: flex;
   justify-content: center;
-  margin: 60px 0;
+  margin: 40px 0;
 }
 
 .preview-image {
   width: 100%;
-  max-width: 1100px;
+  max-width: 900px; 
 }
 
 .preview-image img {
@@ -499,13 +499,13 @@ html {
   transition: all 0.4s ease;
 
   box-shadow: 
-    0 20px 60px rgba(0,0,0,0.6),
-    0 0 40px rgba(167,139,250,0.15);
+    0 15px 40px rgba(0,0,0,0.5),
+    0 0 30px rgba(167,139,250,0.15);
 }
 
 .preview-image img:hover {
-  transform: scale(1.015);
+  transform: scale(1.02);
   box-shadow: 
-    0 30px 80px rgba(0,0,0,0.7),
-    0 0 60px rgba(167,139,250,0.35);
+    0 25px 70px rgba(0,0,0,0.7),
+    0 0 50px rgba(167,139,250,0.3);
 }
