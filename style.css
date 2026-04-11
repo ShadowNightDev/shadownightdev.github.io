@@ -517,23 +517,71 @@ html {
     margin-top: 16px;
     padding-top: 12px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
 }
 
 .password-badge {
     font-size: 0.75rem;
     padding: 6px 12px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 6px;
-    color: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     cursor: pointer;
     transition: all 0.2s ease;
-    user-select: all; 
+    user-select: all;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
 }
 
 .password-badge:hover {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.12);
     color: #fff;
+    border-color: rgba(255, 255, 255, 0.2);
     transform: translateY(-1px);
+}
+
+.download-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+}
+
+.download-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+@media (max-width: 768px) {
+    .download-card {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    .download-actions {
+        width: 100%;
+        margin-top: 16px;
+    }
+    
+    .download-footer {
+        margin-top: 12px;
+        padding-top: 10px;
+        width: 100%;
+    }
+    
+    .password-badge {
+        font-size: 0.7rem;
+        padding: 5px 10px;
+        width: 100%;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 640px) {
