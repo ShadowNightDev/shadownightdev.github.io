@@ -241,35 +241,35 @@
     <section id="download" class="download-section">
 
         <div class="download-card">
-
+    
             <div class="download-left">
                 <div class="badge top-badge">
                     FREE
                 </div>
-
+    
                 <h2>Download Sonix Music</h2>
                 <p>The modern open-source music player for windows.</p>
-
+    
                 <div class="download-meta">
                     <span class="badge">🖥️ Windows</span>
                     <span class="badge">🏷️ <span id="version-badge">—</span></span>
-                    <span class="badge">🔑 Password: sonixmusic.online</span>
                 </div>
             </div>
-
+    
             <button class="btn-primary big-download" onclick="downloadApp()">
-
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M12 3v12"></path>
                     <path d="M8 11l4 4 4-4"></path>
                     <path d="M5 19h14"></path>
                 </svg>
-
                 Download App
             </button>
-
+    
+            <div class="download-footer">
+                <span class="badge password-badge">🔑 Password: sonixmusic.online</span>
+            </div>
         </div>
-
+    
     </section>
 
     <footer>© 2026 Sonix Music</footer>
@@ -349,6 +349,41 @@
         }
     }
 
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const passwordBadge = document.querySelector('.password-badge');
+            if (passwordBadge) {
+                passwordBadge.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const password = 'sonixmusic.online';
+                    
+                    navigator.clipboard.writeText(password).then(() => {
+                        const originalText = this.textContent;
+                        this.textContent = '✅ Copied!';
+                        this.style.background = 'rgba(34, 197, 94, 0.3)';
+                        
+                        setTimeout(() => {
+                            this.textContent = originalText;
+                            this.style.background = '';
+                        }, 1500);
+                    }).catch(() => {
+
+                        const tempInput = document.createElement('input');
+                        tempInput.value = password;
+                        document.body.appendChild(tempInput);
+                        tempInput.select();
+                        document.execCommand('copy');
+                        document.body.removeChild(tempInput);
+                        
+                        const originalText = this.textContent;
+                        this.textContent = '✅ Copied!';
+                        setTimeout(() => {
+                            this.textContent = originalText;
+                        }, 1500);
+                    });
+                });
+            }
+        });
 
         function animateValue(el, end, duration = 800) {
             let startTime = null;
