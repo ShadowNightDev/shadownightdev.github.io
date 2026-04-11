@@ -509,3 +509,41 @@ html {
     0 25px 70px rgba(0,0,0,0.7),
     0 0 50px rgba(167,139,250,0.3);
 }
+
+
+.download-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.password-badge {
+    font-size: 0.75rem;
+    padding: 6px 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: all; 
+}
+
+.password-badge:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 640px) {
+    .download-footer {
+        margin-top: 12px;
+        padding-top: 10px;
+    }
+    
+    .password-badge {
+        font-size: 0.7rem;
+        padding: 5px 10px;
+    }
+}
