@@ -487,7 +487,7 @@ html {
 
 .preview-image {
   width: 100%;
-  max-width: 700px; 
+  max-width: 800px; 
 }
 
 .preview-image img {
@@ -517,6 +517,10 @@ html {
     margin-top: 16px;
     padding-top: 12px;
     width: 100%;
+}
+
+.download-actions > * {
+    border: none !important;
 }
 
 .password-badge {
